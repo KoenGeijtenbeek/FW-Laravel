@@ -34,6 +34,13 @@
               <x-nav-link href="/login">Log In</x-nav-link>
               <x-nav-link href="/register">Register</x-nav-link>
             @endguest
+
+            @auth
+              <form method="POST" action="/logout">
+                @csrf
+                <x-form-button>Log Out</x-form-button>
+              </form
+            @endauth
             
           </div>
         </div>
